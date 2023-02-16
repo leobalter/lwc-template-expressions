@@ -1,0 +1,33 @@
+{
+    "private": true,
+    "name": "@lwc/playground",
+    "version": "2.37.0",
+    "type": "module",
+    "description": "Playground project to experiment with LWC.",
+    "scripts": {
+        "dev": "rollup -c --watch",
+        "build": "NODE_ENV=production rollup -c",
+        "postinstall": "rm -fr node_modules/@lwc/template-compiler && cp -R node_modules/@divmain/lwc-template-compiler node_modules/@lwc/template-compiler && echo \"Replaced template compiler...\""
+    },
+    "devDependencies": {
+        "@divmain/lwc-template-compiler": "^2.35.2",
+        "@lwc/rollup-plugin": "2.35.2",
+        "@rollup/plugin-replace": "^5.0.2",
+        "lwc": "2.35.2",
+        "rollup": "^3.12.0",
+        "rollup-plugin-livereload": "^2.0.5",
+        "rollup-plugin-serve": "^2.0.2"
+    },
+    "overrides": {
+        "@lwc/template-compiler": "npm:@divmain/lwc-template-compiler"
+    },
+    "nx": {
+        "targets": {
+            "build": {
+                "outputs": [
+                    "./dist"
+                ]
+            }
+        }
+    }
+}

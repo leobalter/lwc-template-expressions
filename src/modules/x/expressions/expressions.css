@@ -1,0 +1,29 @@
+.color-box {
+  height: 80px;
+  background: linear-gradient(
+        90deg,
+        rgba(255, 0, 0, 1) 0%,
+        rgba(255, 154, 0, 1) 10%,
+        rgba(208, 222, 33, 1) 20%,
+        rgba(79, 220, 74, 1) 30%,
+        rgba(63, 218, 216, 1) 40%,
+        rgba(47, 201, 226, 1) 50%,
+        rgba(28, 127, 238, 1) 60%,
+        rgba(95, 21, 242, 1) 70%,
+        rgba(186, 12, 248, 1) 80%,
+        rgba(251, 7, 217, 1) 90%,
+        rgba(255, 0, 0, 1) 100%
+    );
+}
+
+.color-box.opacity-0 { opacity: 0; }
+.color-box.opacity-1 { opacity: .1; }
+.color-box.opacity-2 { opacity: .2; }
+.color-box.opacity-3 { opacity: .3; }
+.color-box.opacity-4 { opacity: .4; }
+.color-box.opacity-5 { opacity: .5; }
+.color-box.opacity-6 { opacity: .6; }
+.color-box.opacity-7 { opacity: .7; }
+.color-box.opacity-8 { opacity: .8; }
+.color-box.opacity-9 { opacity: .9; }
+.color-box.opacity-10 { opacity: 1; }

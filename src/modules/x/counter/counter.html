@@ -1,0 +1,19 @@
+<template>
+  <h1>The before and after example</h1>
+
+  <div>Counter: {counter}</div>
+
+  <div>
+    <h2>Increment/decrement, Before</h2>
+    <button onclick={decrement}>-</button>
+    <button onclick={increment}>+</button>
+  </div>
+
+  <div>
+    <h2>Increment/decrement, After</h2>
+    <button onclick={() => counter > 0 && counter--}>-</button>
+    <button onclick={() => counter < 5 && counter++}>+</button>
+  </div>
+
+  <slot name="code"></slot>
+</template>

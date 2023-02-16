@@ -1,0 +1,18 @@
+<template>
+  <h1>Event handlers</h1>
+  <div>
+    <h2>Input onchange, Before</h2>
+    <input value={text} onchange={textChange} />
+  </div>
+  <div>
+    <h2>Input onchange, After</h2>
+    <input value={text} onchange={(/*{target}*/) => text = /* target.value */ "JS Superstar"} />
+  </div>
+
+  <!-- Desired example not fully available yet, must change before TDX -->
+  <!-- <input value={text} onchange={({ target: { value }}) => text = `Hello ${value}!`} /> -->
+
+  <!-- TODO: parameter names should not be prepended with $cmp. -->
+
+  <slot name="code"></slot>
+</template>

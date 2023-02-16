@@ -1,0 +1,45 @@
+<template>
+    <!-- TODO: Add SLDS/Style -->
+    <h1>Hello world!</h1>
+
+    <div class="examples">
+        <x-expressions>
+            <pre slot="code">
+              &lt;div class=&#123;`color-box opacity-$&#123;opRange}`}&gt;Color Box&lt;/div&gt;
+              <br>
+              &lt;input type=&quot;range&quot; value=&#123;opRange} oninput=&#123;opRangeChange} max=&quot;10&quot; /&gt;
+              <br>
+              &lt;p&gt;Opacity: &#123;opRange / 10}&lt;/p&gt;
+            </pre>
+        </x-expressions>
+        <x-counter>
+            <pre slot="code">
+                &lt;div&gt;Counter: &#123;counter}&lt;/div&gt;<br>
+                <br>
+                &lt;div&gt;<br>
+                    &nbsp;&nbsp;&lt;h2&gt;Increment/decrement, Before&lt;/h2&gt;<br>
+                    &nbsp;&nbsp;&lt;button onclick=&#123;decrement}&gt;-&lt;/button&gt;<br>
+                    &nbsp;&nbsp;&lt;button onclick=&#123;increment}&gt;+&lt;/button&gt;<br>
+                &lt;/div&gt;<br>
+                <br>
+                &lt;div&gt;<br>
+                    &nbsp;&nbsp;&lt;h2&gt;Increment/decrement, After&lt;/h2&gt;<br>
+                    &nbsp;&nbsp;&lt;button onclick=&#123;() =&gt; counter &gt; 0 &amp;&amp; counter--}&gt;-&lt;/button&gt;<br>
+                    &nbsp;&nbsp;&lt;button onclick=&#123;() =&gt; counter &lt; 5 &amp;&amp; counter++}&gt;+&lt;/button&gt;<br>
+                &lt;/div&gt;<br>
+            </pre>
+        </x-counter>
+        <x-onchange>
+            <pre slot="code">
+                &lt;div&gt;<br>
+                    &nbsp;&nbsp;&lt;h2&gt;Input onchange, Before&lt;/h2&gt;<br>
+                    &nbsp;&nbsp;&lt;input value=&#123;text} onchange=&#123;textChange} /&gt;<br>
+                &lt;/div&gt;<br>
+                &lt;div&gt;<br>
+                    &nbsp;&nbsp;&lt;h2&gt;Input onchange, After&lt;/h2&gt;<br>
+                    &nbsp;&nbsp;&lt;input value=&#123;text} onchange=&#123;(&#123; target }) =&gt; text = target.value} /&gt;<br>
+                &lt;/div&gt;<br>
+            </pre>
+        </x-onchange>
+    </div>
+</template>

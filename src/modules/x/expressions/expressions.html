@@ -1,0 +1,17 @@
+<template>
+  <!-- TODO: update oninput expression to use arrow function when the feature works -->
+
+  <div>
+    <div class={`color-box opacity-${opRange}`}></div>
+    <input type="range" value={opRange} oninput={opRangeChange} max="10" list="markers"/>
+    <p>Opacity: {(opRange / 10)}</p>
+
+    <datalist id="markers">
+      <option value="0"></option>
+      <option value="5"></option>
+      <option value="10"></option>
+    </datalist>
+  </div>
+
+  <slot name="code"></slot>
+</template>
