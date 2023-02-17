@@ -5,10 +5,13 @@
     <div class="examples">
         <x-expressions>
             <pre slot="code">
-              &lt;div class=&#123;`color-box opacity-$&#123;opRange}`}&gt;Color Box&lt;/div&gt;
+              &lt;div class=&#123;`color-box opacity-$&#123;opRange}`}&gt;&lt;/div&gt;
               <br>
-              &lt;input type=&quot;range&quot; value=&#123;opRange} oninput=&#123;opRangeChange} max=&quot;10&quot; /&gt;
-              <br>
+              &lt;input<br>
+                &nbsp;&nbsp;type=&quot;range&quot; max=&quot;10&quot;<br>
+                &nbsp;&nbsp;value=&#123;opRange}<br>
+                &nbsp;&nbsp;oninput=&#123;(&#123; target }) => opRange = target.value;}<br>
+              /&gt;<br>
               &lt;p&gt;Opacity: &#123;opRange / 10}&lt;/p&gt;
             </pre>
         </x-expressions>

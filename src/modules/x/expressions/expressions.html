@@ -3,7 +3,7 @@
 
   <div>
     <div class={`color-box opacity-${opRange}`}></div>
-    <input type="range" value={opRange} oninput={opRangeChange} max="10" list="markers"/>
+    <input type="range" value={opRange} oninput={({ target: { value } }) => { opRange = value;}} max="10" list="markers"/>
     <p>Opacity: {(opRange / 10)}</p>
 
     <datalist id="markers">
