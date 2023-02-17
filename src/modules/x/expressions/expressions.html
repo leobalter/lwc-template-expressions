@@ -1,6 +1,4 @@
 <template>
-  <!-- TODO: update oninput expression to use arrow function when the feature works -->
-
   <div>
     <div class={`color-box opacity-${opRange}`}></div>
     <input type="range" value={opRange} oninput={({ target: { value } }) => { opRange = value;}} max="10" list="markers"/>
